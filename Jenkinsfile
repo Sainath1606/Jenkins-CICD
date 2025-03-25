@@ -10,7 +10,7 @@ pipeline {
          stage ('build') {
              steps {
                   sh 'ls -ltr'
-                  sh 'cd https://github.com/Sainath1606/Jenkins-CICD &&mvn clean package'
+                  sh 'mvn clean package'
          }       
        } 
      }
