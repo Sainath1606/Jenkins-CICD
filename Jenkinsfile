@@ -15,7 +15,7 @@ pipeline {
        } 
        stage ('deploy to tomcat') {
           steps {
-                def jarFile = 'target/*.jar'
+                   jarFile = 'target/*.jar'
                     echo "Deploying jarFile to Tomcat"
 
                     sh """
