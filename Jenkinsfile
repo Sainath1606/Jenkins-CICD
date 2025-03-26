@@ -15,8 +15,8 @@ pipeline {
        } 
        stage ('deploy to tomcat') {
           steps {
-                def jarFile = findFiles(glob: 'target/*.jar')[0].path
-                    echo "Deploying ${jarFile} to Tomcat"
+                def jarFile = 'target/*.jar'
+                    echo "Deploying jarFile to Tomcat"
 
                     sh """
                     curl -u ${TOMCAT_USER}:${TOMCAT_PASSWORD} -T ${jarFile} ${TOMCAT_URL}/manager/text/deploy?path=/your-app&update=true
